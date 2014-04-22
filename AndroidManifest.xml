@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="14"
         android:targetSdkVersion="17" />
 
     <application
@@ -31,7 +31,7 @@
             android:label="@string/title_activity_linear_layout_activity2" >
         </activity>
         <activity
-            android:name="com.usi.comm.example.layoutEx.MainActivity"
+            android:name="com.usi.comm.example.layoutEx.RelativeLayoutActivity"
             android:label="@string/title_activity_layout_list" >
         </activity>
     </application>
