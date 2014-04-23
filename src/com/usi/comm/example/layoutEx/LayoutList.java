@@ -16,9 +16,8 @@ import android.widget.Toast;
 
 public class LayoutList extends Activity {
 
-	private final String[] layoutTypes = new String[] { "AbsoluteLayout",
-			"FrameLayout", "GridLayout", "LinearLayout", "RelativeLayout",
-			"TableLayout" };
+	private final String[] layoutTypes = new String[] { "TableLayout",
+			"FrameLayout", "GridLayout", "LinearLayout", "RelativeLayout" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,33 +42,35 @@ public class LayoutList extends Activity {
 			Class<? extends Activity> c = null;
 
 			switch (pos) {
-				case 0:
+			case 0:
+				c = TableLayoutActivity.class;
+				break;
+			case 1:
+				c = FrameLayoutActivity.class;
+				break;
+			case 2:
+				c = GridLayout1.class;
+				break;
+			case 3:
+				c = LinearLayoutActivity.class;
+				break;
+			case 4:
+				c = RelativeLayoutActivity.class;
+				break;
+			case 5:
+				// c = TableLayout.class;
+				break;
 
-					break;
-				case 1:
-					break;
-				case 2:
-					break;
-				case 3:
-					c = LinearLayoutActivity.class;
-					break;
-				case 4:
-					c = RelativeLayoutActivity.class;
-					break;
-				case 5:
-					// c = TableLayout.class;
-					break;
-
-				default:
-					return;
+			default:
+				return;
 			}
 
 			if (null != c) {
 				startActivity(new Intent(LayoutList.this, c));
 			} else {
 				Toast.makeText(LayoutList.this,
-						layoutTypes[pos] + "恬撹嶄、おまちしてください", Toast.LENGTH_LONG)
-						.show();
+						layoutTypes[pos] + " is on working , wait pls ~",
+						Toast.LENGTH_LONG).show();
 			}
 		}
 	};
@@ -82,7 +83,7 @@ public class LayoutList extends Activity {
 					.inflate(R.layout.list_items, parent, false);
 			tv.setText(layoutTypes[position]);
 
-			tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP,16);
+			tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
 			tv.setHeight(80);
 			tv.setClickable(true);
 			tv.setTag(position);

@@ -12,5 +12,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_linear_layout_activity2">LinearLayoutActivity2</string>
     <string name="title_activity_layout_list">LayoutList</string>
+    <string name="title_activity_absolute_layout">AbsoluteLayoutActivity</string>
+    <string name="title_activity_table_layout">TableLayoutActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_table_layout2">TableLayout2Activity</string>
 
+    
+    
 </resources>
